@@ -17,8 +17,35 @@ export function isRemoteCalculationSupported(props) {
   );
 }
 
-export function wrapModelCall(props, fromLocal) {
-  return fromLocal(props);
+export function wrapModelCall(props, fromLocal, fromRemote) {
+  const { source, global, remoteCalculation } = props;
+
+  if (global) {
+    if (source.type === MAP_TYPES.TILESET)
+      throw new Error('Tileset sources are not supported in global mode.');
+
+    if (source.credentials.apiVersion === API_VERSIONS.V2) {
+      throw new Error(
+        'CARTO 2 cannot be used in global mode. Upgrade to CARTO 3, please.'
+      );
+    }
+
+    if (!fromRemote) {
+      throw new Error(`Global mode isn't supported for this widget`);
+    }
+
+    return fromRemote(props);
+  } else if (remoteCalculation && isRemoteCalculationSupported(props)) {
+    if (!fromRemote) {
+      throw new Error(`Remote calculation isn't supported for this widget`);
+    }
+
+    // The widget supports remote calculation, preferred whenever possible
+    return fromRemote(props);
+  } else {
+    // Local calculation, it requires data to be available
+    return fromLocal(props);
+  }
 }
 
 export function formatTableNameWithFilters(props) {

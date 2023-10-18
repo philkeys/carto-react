@@ -1,12 +1,13 @@
+import { _executeModel } from '@keys2design/carto-react-api/';
 import { Methods, executeTask } from '@keys2design/carto-react-workers';
-import { wrapModelCall } from './utils';
+import { normalizeObjectKeys, wrapModelCall } from './utils';
 import { AggregationTypes } from '@keys2design/carto-react-core';
 
 export function getTimeSeries(props) {
   if (props.series) {
     return getMultipleSeries(props);
   } else {
-    return wrapModelCall(props, fromLocal);
+    return wrapModelCall(props, fromLocal, fromRemote);
   }
 }
 
@@ -60,6 +61,43 @@ function fromLocal({
     splitByCategoryLimit,
     splitByCategoryValues
   });
+}
+
+// From remote
+function fromRemote(props) {
+  const { source, abortController, spatialFilter, ...params } = props;
+  const {
+    column,
+    operationColumn,
+    joinOperation,
+    operation,
+    stepSize,
+    stepMultiplier,
+    splitByCategory,
+    splitByCategoryLimit,
+    splitByCategoryValues
+  } = params;
+
+  return _executeModel({
+    model: 'timeseries',
+    source,
+    spatialFilter,
+    params: {
+      column,
+      stepSize,
+      stepMultiplier,
+      operationColumn: operationColumn || column,
+      joinOperation,
+      operation,
+      splitByCategory,
+      splitByCategoryLimit,
+      splitByCategoryValues
+    },
+    opts: { abortController }
+  }).then((res) => ({
+    rows: normalizeObjectKeys(res.rows),
+    categories: res.metadata?.categories
+  }));
 }
 
 function getCategoryForAggregationOperation({ operation, operationColumn, series }) {
