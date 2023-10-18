@@ -8,8 +8,8 @@ import {
   groupValuesByColumn,
   groupValuesByDateColumn,
   AggregationTypes
-} from '@keys2design/carto-react-core';
-import { InvalidColumnError } from '@keys2design/carto-react-core/';
+} from '@carto/react-core';
+import { InvalidColumnError } from '@carto/react-core/';
 import { applySorting } from '../utils/sorting';
 
 let currentFeatures;
@@ -63,10 +63,8 @@ export function getFormula({
   filtersLogicalOperator,
   operation,
   column,
-  joinOperation,
-  currentFeatures: cf
+  joinOperation
 }) {
-  currentFeatures = cf;
   let result = null;
 
   if (currentFeatures) {
@@ -98,10 +96,8 @@ export function getHistogram({
   operation,
   column,
   ticks,
-  joinOperation,
-  currentFeatures: cf
+  joinOperation
 }) {
-  currentFeatures = cf;
   let result = null;
 
   if (currentFeatures) {
@@ -127,10 +123,8 @@ export function getCategories({
   operation,
   column,
   operationColumn,
-  joinOperation,
-  currentFeatures: cf
+  joinOperation
 }) {
-  currentFeatures = cf;
   let result = null;
 
   if (currentFeatures) {
@@ -158,10 +152,8 @@ export function getScatterPlot({
   xAxisColumn,
   yAxisColumn,
   xAxisJoinOperation,
-  yAxisJoinOperation,
-  currentFeatures: cf
+  yAxisJoinOperation
 }) {
-  currentFeatures = cf;
   let result = [];
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
@@ -187,10 +179,8 @@ export function getTimeSeries({
   stepSize,
   operation,
   operationColumn,
-  joinOperation,
-  currentFeatures: cf
+  joinOperation
 }) {
-  currentFeatures = cf;
   let result = [];
 
   if (currentFeatures) {
@@ -213,13 +203,7 @@ export function getTimeSeries({
   return result;
 }
 
-export function getRange({
-  filters,
-  filtersLogicalOperator,
-  column,
-  currentFeatures: cf
-}) {
-  currentFeatures = cf;
+export function getRange({ filters, filtersLogicalOperator, column }) {
   let result = null;
 
   if (currentFeatures) {
