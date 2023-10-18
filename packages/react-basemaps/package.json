@@ -1,6 +1,6 @@
 {
   "name": "@keys2design/carto-react-basemaps",
-  "version": "2.2.13",
+  "version": "2.2.14",
   "description": "CARTO for React - Basemaps",
   "keywords": [
     "carto",
@@ -68,8 +68,8 @@
     "@babel/runtime": "^7.13.9"
   },
   "peerDependencies": {
-    "@keys2design/carto-react-core": "^2.2.13",
     "@deck.gl/google-maps": "^8.9.18",
+    "@keys2design/carto-react-core": "^2.2.13",
     "react": "17.x || 18.x",
     "react-dom": "17.x || 18.x"
   }

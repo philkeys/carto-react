@@ -1,6 +1,6 @@
 {
   "name": "@keys2design/carto-react-ui",
-  "version": "2.2.13",
+  "version": "2.2.14",
   "description": "CARTO for React - UI",
   "author": "CARTO Dev Team",
   "keywords": [
@@ -82,9 +82,9 @@
     "@babel/runtime": "^7.13.9"
   },
   "peerDependencies": {
-    "@keys2design/carto-react-core": "^2.2.13",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@keys2design/carto-react-core": "^2.2.13",
     "@mui/icons-material": "^5.11.16",
     "@mui/lab": "^5.0.0-alpha.125",
     "@mui/material": "^5.11.16",
