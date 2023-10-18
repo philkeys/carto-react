@@ -1,6 +1,6 @@
 import { Methods, executeTask } from '@keys2design/carto-react-workers';
 import { wrapModelCall } from './utils';
-import { geojsonFeatures } from '@keys2design/carto-react-core/index';
+import { geojsonFeatures } from '@keys2design/carto-react-core';
 
 export function getHistogram(props) {
   return wrapModelCall(props, fromLocal);
