@@ -1,31 +1,26 @@
-import { _executeModel } from '@keys2design/carto-react-api';
 import { Methods, executeTask } from '@keys2design/carto-react-workers';
-import { normalizeObjectKeys, wrapModelCall } from './utils';
+import { wrapModelCall } from './utils';
+import { geojsonFeatures } from '@keys2design/carto-react-core/index';
 
 export function getRange(props) {
-  return wrapModelCall(props, fromLocal, fromRemote);
+  return wrapModelCall(props, fromLocal);
 }
 
 // From local
 function fromLocal(props) {
-  const { source, column } = props;
+  const { source, column, viewport, spatialFilter } = props;
+
+  const currentFeatures = geojsonFeatures({
+    geojson: source.data,
+    viewport,
+    geometry: spatialFilter,
+    uniqueIdProperty: 'listing_id'
+  });
 
   return executeTask(source.id, Methods.FEATURES_RANGE, {
     filters: source.filters,
     filtersLogicalOperator: source.filtersLogicalOperator,
-    column
+    column,
+    currentFeatures
   });
-}
-
-// From remote
-function fromRemote(props) {
-  const { source, abortController, ...params } = props;
-  const { column } = params;
-
-  return _executeModel({
-    model: 'range',
-    source,
-    params: { column },
-    opts: { abortController }
-  }).then((res) => normalizeObjectKeys(res.rows[0]));
 }

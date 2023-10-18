@@ -67,6 +67,7 @@ export default function useWidgetFetch(
     onError,
     onStateChange,
     enabled = true,
+    isFetchingListings = false,
     attemptRemoteCalculation = false
   }
 ) {
@@ -128,7 +129,7 @@ export default function useWidgetFetch(
           }
         })
         .finally(() => {
-          if (outdated) return;
+          if (outdated || isFetchingListings) return;
 
           setIsLoading(false);
         });
@@ -144,7 +145,8 @@ export default function useWidgetFetch(
       isSourceReady,
       global,
       remoteCalculation,
-      geometryToIntersect,
+      // geometryToIntersect,
+      isFetchingListings,
       enabled
     ],
     dequal

@@ -63,8 +63,10 @@ export function getFormula({
   filtersLogicalOperator,
   operation,
   column,
-  joinOperation
+  joinOperation,
+  currentFeatures: cf
 }) {
+  currentFeatures = cf;
   let result = null;
 
   if (currentFeatures) {
@@ -96,8 +98,10 @@ export function getHistogram({
   operation,
   column,
   ticks,
-  joinOperation
+  joinOperation,
+  currentFeatures: cf
 }) {
+  currentFeatures = cf;
   let result = null;
 
   if (currentFeatures) {
@@ -123,8 +127,10 @@ export function getCategories({
   operation,
   column,
   operationColumn,
-  joinOperation
+  joinOperation,
+  currentFeatures: cf
 }) {
+  currentFeatures = cf;
   let result = null;
 
   if (currentFeatures) {
@@ -152,8 +158,10 @@ export function getScatterPlot({
   xAxisColumn,
   yAxisColumn,
   xAxisJoinOperation,
-  yAxisJoinOperation
+  yAxisJoinOperation,
+  currentFeatures: cf
 }) {
+  currentFeatures = cf;
   let result = [];
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
@@ -179,8 +187,10 @@ export function getTimeSeries({
   stepSize,
   operation,
   operationColumn,
-  joinOperation
+  joinOperation,
+  currentFeatures: cf
 }) {
+  currentFeatures = cf;
   let result = [];
 
   if (currentFeatures) {
@@ -203,7 +213,13 @@ export function getTimeSeries({
   return result;
 }
 
-export function getRange({ filters, filtersLogicalOperator, column }) {
+export function getRange({
+  filters,
+  filtersLogicalOperator,
+  column,
+  currentFeatures: cf
+}) {
+  currentFeatures = cf;
   let result = null;
 
   if (currentFeatures) {

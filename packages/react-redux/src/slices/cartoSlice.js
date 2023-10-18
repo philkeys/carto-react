@@ -32,7 +32,7 @@ import {
  *  }
  * @param  {object} initialState - the initial state of the state
  */
-export const createCartoSlice = (initialState) => {
+export const createCartoSlice = (initialState, reducers, extraReducers) => {
   const slice = createSlice({
     name: 'carto',
     initialState: {
@@ -190,8 +190,10 @@ export const createCartoSlice = (initialState) => {
       },
       setFeatureSelectionEnabled: (state, action) => {
         state.featureSelectionEnabled = action.payload;
-      }
-    }
+      },
+      ...reducers
+    },
+    ...extraReducers
   });
 
   return slice.reducer;

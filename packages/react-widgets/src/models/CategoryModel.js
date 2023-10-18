@@ -1,14 +1,29 @@
-import { _executeModel } from '@keys2design/carto-react-api/';
 import { Methods, executeTask } from '@keys2design/carto-react-workers';
-import { normalizeObjectKeys, wrapModelCall } from './utils';
+import { wrapModelCall } from './utils';
+import { geojsonFeatures } from '@keys2design/carto-react-core/index';
 
 export function getCategories(props) {
-  return wrapModelCall(props, fromLocal, fromRemote);
+  return wrapModelCall(props, fromLocal);
 }
 
 // From local
 function fromLocal(props) {
-  const { source, column, operationColumn, operation, joinOperation } = props;
+  const {
+    source,
+    column,
+    operationColumn,
+    operation,
+    joinOperation,
+    viewport,
+    spatialFilter
+  } = props;
+
+  const currentFeatures = geojsonFeatures({
+    geojson: source.data,
+    viewport,
+    geometry: spatialFilter,
+    uniqueIdProperty: 'listing_id'
+  });
 
   return executeTask(source.id, Methods.FEATURES_CATEGORY, {
     filters: source.filters,
@@ -16,24 +31,7 @@ function fromLocal(props) {
     operation,
     joinOperation,
     column,
-    operationColumn: operationColumn || column
+    operationColumn: operationColumn || column,
+    currentFeatures
   });
-}
-
-// From remote
-function fromRemote(props) {
-  const { source, spatialFilter, abortController, ...params } = props;
-  const { column, operation, operationColumn } = params;
-
-  return _executeModel({
-    model: 'category',
-    source,
-    spatialFilter,
-    params: {
-      column,
-      operation,
-      operationColumn: operationColumn || column
-    },
-    opts: { abortController }
-  }).then((res) => normalizeObjectKeys(res.rows));
 }

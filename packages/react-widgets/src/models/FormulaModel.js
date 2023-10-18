@@ -1,15 +1,21 @@
-import { _executeModel } from '@keys2design/carto-react-api';
 import { Methods, executeTask } from '@keys2design/carto-react-workers';
-import { normalizeObjectKeys, wrapModelCall } from './utils';
-import { AggregationTypes } from '@keys2design/carto-react-core';
+import { wrapModelCall } from './utils';
+import { AggregationTypes, geojsonFeatures } from '@keys2design/carto-react-core';
 
 export function getFormula(props) {
-  return wrapModelCall(props, fromLocal, fromRemote);
+  return wrapModelCall(props, fromLocal);
 }
 
 // From local
 function fromLocal(props) {
-  const { source, operation, column, joinOperation } = props;
+  const { source, operation, column, joinOperation, viewport, spatialFilter } = props;
+
+  const currentFeatures = geojsonFeatures({
+    geojson: source.data,
+    viewport,
+    geometry: spatialFilter,
+    uniqueIdProperty: 'listing_id'
+  });
 
   if (operation === AggregationTypes.CUSTOM) {
     throw new Error('Custom aggregation not supported for local widget calculation');
@@ -19,20 +25,7 @@ function fromLocal(props) {
     filtersLogicalOperator: source.filtersLogicalOperator,
     operation,
     joinOperation,
-    column
+    column,
+    currentFeatures
   });
-}
-
-// From remote
-function fromRemote(props) {
-  const { source, spatialFilter, abortController, operationExp, ...params } = props;
-  const { column, operation } = params;
-
-  return _executeModel({
-    model: 'formula',
-    source,
-    spatialFilter,
-    params: { column: column ?? '*', operation, operationExp },
-    opts: { abortController }
-  }).then((res) => normalizeObjectKeys(res.rows[0]));
 }
