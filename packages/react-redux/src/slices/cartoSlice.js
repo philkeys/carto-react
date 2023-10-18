@@ -1,7 +1,6 @@
+'use client';
 import { createSlice } from '@reduxjs/toolkit';
 import { WebMercatorViewport } from '@deck.gl/core/typed';
-import { setDefaultCredentials } from '@deck.gl/carto/typed';
-import { removeWorker } from '@keys2design/carto-react-workers';
 import {
   FEATURE_SELECTION_MODES,
   FiltersLogicalOperators,
@@ -70,7 +69,6 @@ export const createCartoSlice = (initialState, reducers, extraReducers) => {
       },
       removeSource: (state, action) => {
         delete state.dataSources[action.payload];
-        removeWorker(action.payload);
       },
       addLayer: (state, action) => {
         state.layers[action.payload.id] = action.payload;
@@ -183,7 +181,6 @@ export const createCartoSlice = (initialState, reducers, extraReducers) => {
           ...state.credentials,
           ...action.payload
         };
-        setDefaultCredentials(state.credentials);
       },
       setFeatureSelectionMode: (state, action) => {
         state.featureSelectionMode = action.payload;
