@@ -292,23 +292,4 @@ describe('carto slice', () => {
       expect(carto.featuresReady[sourceInfo.sourceId]).toBe(true);
     });
   });
-
-  describe('credentials actions', () => {
-    test('should override default credentials', () => {
-      store.dispatch(cartoSlice.setCredentials({ updatedProp: 'update' }));
-
-      const { carto: state } = store.getState();
-      expect(state.credentials).toEqual({
-        ...INITIAL_STATE.credentials,
-        updatedProp: 'update'
-      });
-    });
-
-    test('should call setDefaultCredentials', () => {
-      store.dispatch(cartoSlice.setCredentials({ updatedProp: 'update' }));
-
-      const { carto: state } = store.getState();
-      expect(setDefaultCredentials).toHaveBeenCalledWith(state.credentials);
-    });
-  });
 });
