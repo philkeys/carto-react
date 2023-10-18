@@ -1,7 +1,7 @@
 import { getScatter } from '../../src/models/ScatterPlotModel';
-import { Methods, executeTask } from '@carto/react-workers';
+import { Methods, executeTask } from '@keys2design/carto-react-workers';
 
-jest.mock('@carto/react-workers', () => ({
+jest.mock('@keys2design/carto-react-workers', () => ({
   executeTask: jest.fn(),
   Methods: {
     FEATURES_SCATTERPLOT: 'featuresScatterPlot'

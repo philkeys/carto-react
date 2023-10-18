@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Box, Menu, IconButton, MenuItem, SvgIcon } from '@mui/material';
 
-import { GroupDateTypes } from '@carto/react-core';
+import { GroupDateTypes } from '@keys2design/carto-react-core';
 import Typography from '../../../components/atoms/Typography';
 import { useTimeSeriesContext } from '../hooks/TimeSeriesContext';
 import { countDistinctTimePoints, findItemIndexByTime } from '../utils/utilities';

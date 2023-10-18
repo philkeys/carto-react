@@ -5,7 +5,7 @@ import {
   InvalidColumnError,
   REQUEST_GET_MAX_URL_LENGTH,
   _assert as assert
-} from '@carto/react-core/';
+} from '@keys2design/carto-react-core/';
 
 /**
  * Execute a stats service request.

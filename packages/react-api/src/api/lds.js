@@ -1,4 +1,4 @@
-import { _getClient } from '@carto/react-core';
+import { _getClient } from '@keys2design/carto-react-core';
 import { checkCredentials, makeCall } from './common';
 
 /**

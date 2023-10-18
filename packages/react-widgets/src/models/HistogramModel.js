@@ -1,5 +1,5 @@
-import { _executeModel } from '@carto/react-api';
-import { Methods, executeTask } from '@carto/react-workers';
+import { _executeModel } from '@keys2design/carto-react-api';
+import { Methods, executeTask } from '@keys2design/carto-react-workers';
 import { normalizeObjectKeys, wrapModelCall } from './utils';
 
 export function getHistogram(props) {

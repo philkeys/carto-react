@@ -109,7 +109,7 @@ const DocTemplate = () => {
       <Typography mt={2}>
         For external use:
         <DocHighlight component='span'>
-          {'import { AppBar } from "@carto/react-ui";'}
+          {'import { AppBar } from "@keys2design/carto-react-ui";'}
         </DocHighlight>
         .
       </Typography>

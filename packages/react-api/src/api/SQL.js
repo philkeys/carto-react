@@ -1,5 +1,5 @@
-import { encodeParameter, getRequest, postRequest } from '@carto/react-core';
-import { REQUEST_GET_MAX_URL_LENGTH } from '@carto/react-core';
+import { encodeParameter, getRequest, postRequest } from '@keys2design/carto-react-core';
+import { REQUEST_GET_MAX_URL_LENGTH } from '@keys2design/carto-react-core';
 import { API_VERSIONS } from '@deck.gl/carto/typed';
 
 import { dealWithApiError, CLIENT_ID } from './common';

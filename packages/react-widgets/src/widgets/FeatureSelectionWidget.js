@@ -1,4 +1,7 @@
-import { FeatureSelectionWidgetUI, featureSelectionIcons } from '@carto/react-ui';
+import {
+  FeatureSelectionWidgetUI,
+  featureSelectionIcons
+} from '@keys2design/carto-react-ui';
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,11 +10,11 @@ import {
   addSpatialFilter,
   removeSpatialFilter,
   setFeatureSelectionEnabled
-} from '@carto/react-redux';
+} from '@keys2design/carto-react-redux';
 import {
   FEATURE_SELECTION_MODES,
   EDIT_MODES as EDIT_MODES_KEYS
-} from '@carto/react-core';
+} from '@keys2design/carto-react-core';
 
 const { PolygonIcon, RectangleIcon, CircleIcon, LassoIcon, CursorIcon } =
   featureSelectionIcons;

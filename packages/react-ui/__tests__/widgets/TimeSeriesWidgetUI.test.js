@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, act, fireEvent, waitFor } from '../widgets/utils/testUtils';
 import TimeSeriesWidgetUI from '../../src/widgets/TimeSeriesWidgetUI/TimeSeriesWidgetUI';
 import { mockEcharts } from './testUtils';
-import { GroupDateTypes } from '@carto/react-core';
+import { GroupDateTypes } from '@keys2design/carto-react-core';
 
 describe('TimeSeriesWidgetUI', () => {
   beforeAll(() => {

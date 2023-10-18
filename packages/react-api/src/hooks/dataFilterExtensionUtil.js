@@ -1,5 +1,5 @@
 import { DataFilterExtension } from '@deck.gl/extensions/typed';
-import { _buildFeatureFilter, _FilterTypes } from '@carto/react-core';
+import { _buildFeatureFilter, _FilterTypes } from '@keys2design/carto-react-core';
 
 // Don't change this value to maintain compatibility with builder
 export const MAX_GPU_FILTERS = 4;

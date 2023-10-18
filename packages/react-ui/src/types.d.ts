@@ -1,4 +1,4 @@
-import { GroupDateTypes } from '@carto/react-core';
+import { GroupDateTypes } from '@keys2design/carto-react-core';
 export { SelectFieldProps } from './components/atoms/SelectField';
 export { TypographyProps } from './components/atoms/Typography';
 export { LabelWithIndicatorProps } from './components/atoms/LabelWithIndicator';

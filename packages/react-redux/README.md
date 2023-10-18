@@ -1,12 +1,12 @@
-# `@carto/react-redux`
+# `@keys2design/carto-react-redux`
 
 <p>
-  <a href="https://npmjs.org/package/@carto/react-redux">
-    <img src="https://img.shields.io/npm/v/@carto/react-redux.svg?style=flat-square" alt="version" />
+  <a href="https://npmjs.org/package/@keys2design/carto-react-redux">
+    <img src="https://img.shields.io/npm/v/@keys2design/carto-react-redux.svg?style=flat-square" alt="version" />
   </a>
 
-  <a href="https://npmjs.org/package/@carto/react-redux">
-    <img src="https://img.shields.io/npm/dt/@carto/react-redux.svg?style=flat-square" alt="downloads" />
+  <a href="https://npmjs.org/package/@keys2design/carto-react-redux">
+    <img src="https://img.shields.io/npm/dt/@keys2design/carto-react-redux.svg?style=flat-square" alt="downloads" />
   </a>
 </p>
 

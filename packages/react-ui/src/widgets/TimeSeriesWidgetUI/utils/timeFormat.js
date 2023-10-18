@@ -1,4 +1,4 @@
-import { GroupDateTypes, getMonday } from '@carto/react-core';
+import { GroupDateTypes, getMonday } from '@keys2design/carto-react-core';
 
 const fullTimeFormatters = {
   [GroupDateTypes.YEARS]: formatLocalDate,

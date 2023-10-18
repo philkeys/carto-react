@@ -1,6 +1,6 @@
 // Geocoding / Data Services https://carto.com/developers/data-services-api/reference/
 
-import { executeSQL, ldsGeocode } from '@carto/react-api';
+import { executeSQL, ldsGeocode } from '@keys2design/carto-react-api';
 import { API_VERSIONS } from '@deck.gl/carto/typed';
 
 /**

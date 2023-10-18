@@ -8,8 +8,8 @@ import {
   groupValuesByColumn,
   groupValuesByDateColumn,
   AggregationTypes
-} from '@carto/react-core';
-import { InvalidColumnError } from '@carto/react-core/';
+} from '@keys2design/carto-react-core';
+import { InvalidColumnError } from '@keys2design/carto-react-core/';
 import { applySorting } from '../utils/sorting';
 
 let currentFeatures;

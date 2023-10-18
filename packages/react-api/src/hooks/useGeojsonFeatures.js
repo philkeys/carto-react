@@ -1,6 +1,6 @@
 import { useEffect, useCallback } from 'react';
-import { debounce } from '@carto/react-core';
-import { Methods, executeTask } from '@carto/react-workers';
+import { debounce } from '@keys2design/carto-react-core';
+import { Methods, executeTask } from '@keys2design/carto-react-workers';
 import { throwError } from './utils';
 import useFeaturesCommons from './useFeaturesCommons';
 

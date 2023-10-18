@@ -125,7 +125,7 @@ const DocTemplate = () => {
       <Typography mt={2}>
         For external use:
         <DocHighlight component='span'>
-          {'import { MultipleSelectField } from "@carto/react-ui";'}
+          {'import { MultipleSelectField } from "@keys2design/carto-react-ui";'}
         </DocHighlight>
         .
       </Typography>

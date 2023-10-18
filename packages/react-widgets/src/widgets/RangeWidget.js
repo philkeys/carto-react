@@ -5,13 +5,13 @@ import {
   _FilterTypes as FilterTypes,
   _FeatureFlags,
   _hasFeatureFlag
-} from '@carto/react-core';
-import { WrapperWidgetUI } from '@carto/react-ui';
-import { addFilter, selectSourceById } from '@carto/react-redux/';
+} from '@keys2design/carto-react-core';
+import { WrapperWidgetUI } from '@keys2design/carto-react-ui';
+import { addFilter, selectSourceById } from '@keys2design/carto-react-redux/';
 import { getRange } from '../models/RangeModel';
 import useWidgetFetch from '../hooks/useWidgetFetch';
 import WidgetWithAlert from './utils/WidgetWithAlert';
-import { RangeWidgetUI } from '@carto/react-ui';
+import { RangeWidgetUI } from '@keys2design/carto-react-ui';
 import useStats from '../hooks/useStats';
 
 /**

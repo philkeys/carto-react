@@ -7,12 +7,12 @@ const webpackBaseConfig = require('../../webpack.base');
 const webpackConfig = {
   ...webpackBaseConfig,
   externals: [
-    /^@carto\/react-.+$/,
+    /^@keys2design\/react-.+$/,
     /^@deck.gl\/.+$/,
-    'react', 
+    'react',
     'react-dom',
     'react-redux',
-    'redux',
+    'redux'
   ],
   output: {
     path: path.resolve(__dirname, './dist'),

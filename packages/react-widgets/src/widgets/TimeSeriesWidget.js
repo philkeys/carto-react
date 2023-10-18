@@ -1,20 +1,20 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getTimeSeries } from '../models';
-import { addFilter, removeFilter } from '@carto/react-redux';
+import { addFilter, removeFilter } from '@keys2design/carto-react-redux';
 import {
   TimeSeriesWidgetUI,
   WrapperWidgetUI,
   TIME_SERIES_CHART_TYPES,
   Typography
-} from '@carto/react-ui';
+} from '@keys2design/carto-react-ui';
 import {
   GroupDateTypes,
   AggregationTypes,
   _FilterTypes as FilterTypes,
   _hasFeatureFlag,
   _FeatureFlags
-} from '@carto/react-core';
+} from '@keys2design/carto-react-core';
 import { capitalize, Menu, MenuItem, SvgIcon } from '@mui/material';
 import { PropTypes } from 'prop-types';
 import { columnAggregationOn } from './utils/propTypesFns';

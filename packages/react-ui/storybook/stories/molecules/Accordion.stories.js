@@ -7,7 +7,7 @@ import {
   Divider,
   Grid
 } from '@mui/material';
-import { Typography } from '@carto/react-ui';
+import { Typography } from '@keys2design/carto-react-ui';
 import {
   BoxContent,
   DocContainer,
@@ -121,7 +121,7 @@ const GroupTemplate = ({ defaultExpanded, ...args }) => {
           <Typography mt={2}>
             For external use:
             <DocHighlight component='span'>
-              {'import { AccordionGroup } from "@carto/react-ui";'}
+              {'import { AccordionGroup } from "@keys2design/carto-react-ui";'}
             </DocHighlight>
             .
           </Typography>

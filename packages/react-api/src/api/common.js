@@ -1,4 +1,4 @@
-import { InvalidColumnError } from '@carto/react-core/';
+import { InvalidColumnError } from '@keys2design/carto-react-core/';
 
 /**
  * Return more descriptive error from API

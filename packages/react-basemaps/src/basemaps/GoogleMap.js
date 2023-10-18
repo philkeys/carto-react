@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { GoogleMapsOverlay } from '@deck.gl/google-maps/typed';
-import { debounce } from '@carto/react-core';
+import { debounce } from '@keys2design/carto-react-core';
 
 /**
  * React component for working with Google Maps API and deck.gl

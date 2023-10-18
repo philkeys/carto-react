@@ -1,6 +1,6 @@
 # Upgrade Guide
 
-## Upgrading from @carto/react v1.0 to v1.1
+## Upgrading from @keys2design/carto-react v1.0 to v1.1
 
 ### executeSQL parameters via destructuring
 

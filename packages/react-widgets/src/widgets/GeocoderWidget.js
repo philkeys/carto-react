@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
-import { addLayer, setViewState } from '@carto/react-redux';
+import { addLayer, setViewState } from '@keys2design/carto-react-redux';
 
 import { CircularProgress, InputBase, Paper, SvgIcon, styled } from '@mui/material';
 import useGeocoderWidgetController from '../hooks/useGeocoderWidgetController';

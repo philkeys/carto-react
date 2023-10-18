@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import { Typography } from '@carto/react-ui';
+import { Typography } from '@keys2design/carto-react-ui';
 import { icons } from '../../../src/assets';
 import { GridVerticalContent } from '../../utils/storyStyles';
 

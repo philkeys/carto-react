@@ -2,12 +2,12 @@
 
 <p>
 
-  <a href="https://npmjs.org/package/@carto/react-core">
-    <img src="https://img.shields.io/npm/v/@carto/react-api.svg?style=flat-square" alt="version" />
+  <a href="https://npmjs.org/package/@keys2design/carto-react-core">
+    <img src="https://img.shields.io/npm/v/@keys2design/carto-react-api.svg?style=flat-square" alt="version" />
   </a>
 
-  <a href="https://npmjs.org/package/@carto/react-core">
-    <img src="https://img.shields.io/npm/dt/@carto/react-api.svg?style=flat-square" alt="downloads" />
+  <a href="https://npmjs.org/package/@keys2design/carto-react-core">
+    <img src="https://img.shields.io/npm/dt/@keys2design/carto-react-api.svg?style=flat-square" alt="downloads" />
   </a>
 
   <a href="https://coveralls.io/github/CartoDB/carto-react?branch=master">
@@ -17,18 +17,18 @@
 </p>
 <br/>
 
-This is the official "CARTO for React library". It is organized as a set of **npm packages** (`@carto/react-*`), that work together providing widgets and utilities to build Location Intelligence applications with React, Redux & Material-UI.
+This is the official "CARTO for React library". It is organized as a set of **npm packages** (`@keys2design/carto-react-*`), that work together providing widgets and utilities to build Location Intelligence applications with React, Redux & Material-UI.
 
 The packages are:
 
-- [@carto/react-api](packages/react-api/README.md)
-- [@carto/react-auth](packages/react-auth/README.md)
-- [@carto/react-basemaps](packages/react-basemaps/README.md)
-- [@carto/react-core](packages/react-core/README.md)
-- [@carto/react-redux](packages/react-redux/README.md)
-- [@carto/react-ui](packages/react-ui/README.md)
-- [@carto/react-widgets](packages/react-widgets/README.md)
-- [@carto/react-workers](packages/react-workers/README.md)
+- [@keys2design/carto-react-api](packages/react-api/README.md)
+- [@keys2design/carto-react-auth](packages/react-auth/README.md)
+- [@keys2design/carto-react-basemaps](packages/react-basemaps/README.md)
+- [@keys2design/carto-react-core](packages/react-core/README.md)
+- [@keys2design/carto-react-redux](packages/react-redux/README.md)
+- [@keys2design/carto-react-ui](packages/react-ui/README.md)
+- [@keys2design/carto-react-widgets](packages/react-widgets/README.md)
+- [@keys2design/carto-react-workers](packages/react-workers/README.md)
 
 To work in the code, see [developers](DEVELOPERS.md).
 
@@ -45,14 +45,14 @@ If you are using the `CARTO CRA templates`, everything is already setup, so **no
 In case you want to use this set of packages in a different context, then you would need to install them as usual, with something like:
 
 ```
-  yarn add @carto/react-api
-  yarn add @carto/react-auth
-  yarn add @carto/react-basemaps
-  yarn add @carto/react-core
-  yarn add @carto/react-redux
-  yarn add @carto/react-ui
-  yarn add @carto/react-widgets
-  yarn add @carto/react-workers
+  yarn add @keys2design/carto-react-api
+  yarn add @keys2design/carto-react-auth
+  yarn add @keys2design/carto-react-basemaps
+  yarn add @keys2design/carto-react-core
+  yarn add @keys2design/carto-react-redux
+  yarn add @keys2design/carto-react-ui
+  yarn add @keys2design/carto-react-widgets
+  yarn add @keys2design/carto-react-workers
 ```
 
 Notice that to avoid issues within host projects, most of the base libraries are declared as **peer dependencies** (deck.gl, react, material-ui, reduxjs-toolkit, echarts...). That means that you would need to add them explicitly to your project, if you are still not using them (keep an eye on the console warnings on peer dependencies).

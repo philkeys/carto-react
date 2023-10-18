@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Box, Link, Slider, TextField, styled } from '@mui/material';
-import { debounce } from '@carto/react-core';
+import { debounce } from '@keys2design/carto-react-core';
 import Typography from '../../components/atoms/Typography';
 import RangeSkeleton from './RangeSkeleton';
 

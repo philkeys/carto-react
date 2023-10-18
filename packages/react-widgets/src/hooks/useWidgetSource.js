@@ -1,5 +1,5 @@
-import { _getApplicableFilters as getApplicableFilters } from '@carto/react-core/';
-import { selectSourceById } from '@carto/react-redux/';
+import { _getApplicableFilters as getApplicableFilters } from '@keys2design/carto-react-core/';
+import { selectSourceById } from '@keys2design/carto-react-redux/';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import useCustomCompareMemo from './useCustomCompareMemo';

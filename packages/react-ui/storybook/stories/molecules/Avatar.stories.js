@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, useTheme } from '@mui/material';
 import { Star } from '@mui/icons-material';
-import { getCartoColorStylePropsForItem, Avatar } from '@carto/react-ui';
+import { getCartoColorStylePropsForItem, Avatar } from '@keys2design/carto-react-ui';
 import {
   BoxContent,
   DocContainer,
@@ -364,7 +364,7 @@ const DocTemplate = () => {
       <Typography mt={2}>
         For external use:
         <DocHighlight component='span'>
-          {'import { Avatar } from "@carto/react-ui";'}
+          {'import { Avatar } from "@keys2design/carto-react-ui";'}
         </DocHighlight>
         .
       </Typography>

@@ -5,7 +5,7 @@ import {
   formatOperationColumn,
   normalizeObjectKeys
 } from '../../src/models/utils';
-import { AggregationTypes, _filtersToSQL } from '@carto/react-core';
+import { AggregationTypes, _filtersToSQL } from '@keys2design/carto-react-core';
 
 const V2_SOURCE = {
   id: '__test__',

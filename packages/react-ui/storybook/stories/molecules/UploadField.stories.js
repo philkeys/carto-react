@@ -414,7 +414,7 @@ const DocTemplate = () => {
       <Typography mt={2}>
         For external use:
         <DocHighlight component='span'>
-          {'import { UploadField } from "@carto/react-ui";'}
+          {'import { UploadField } from "@keys2design/carto-react-ui";'}
         </DocHighlight>
         .
       </Typography>

@@ -2,7 +2,7 @@ import React, { useMemo, useCallback, useEffect, useRef } from 'react';
 import { Box, Link, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 
-import { GroupDateTypes } from '@carto/react-core';
+import { GroupDateTypes } from '@keys2design/carto-react-core';
 
 import TimeSeriesChart from './components/TimeSeriesChart';
 import { TimeSeriesProvider, useTimeSeriesContext } from './hooks/TimeSeriesContext';

@@ -6,8 +6,8 @@ import {
   selectSpatialFilter,
   setFeatureSelectionEnabled,
   selectFeatureSelectionMode
-} from '@carto/react-redux';
-import { EDIT_MODES } from '@carto/react-core';
+} from '@keys2design/carto-react-redux';
+import { EDIT_MODES } from '@keys2design/carto-react-core';
 import { hexToRgb, useTheme } from '@mui/material';
 import EditableCartoGeoJsonLayer from './EditableCartoGeoJsonLayer';
 import useEventManager from './useEventManager';

@@ -1,12 +1,12 @@
-# `@carto/react-api`
+# `@keys2design/carto-react-api`
 
 <p>
-  <a href="https://npmjs.org/package/@carto/react-api">
-    <img src="https://img.shields.io/npm/v/@carto/react-api.svg?style=flat-square" alt="version" />
+  <a href="https://npmjs.org/package/@keys2design/carto-react-api">
+    <img src="https://img.shields.io/npm/v/@keys2design/carto-react-api.svg?style=flat-square" alt="version" />
   </a>
 
-  <a href="https://npmjs.org/package/@carto/react-api">
-    <img src="https://img.shields.io/npm/dt/@carto/react-api.svg?style=flat-square" alt="downloads" />
+  <a href="https://npmjs.org/package/@keys2design/carto-react-api">
+    <img src="https://img.shields.io/npm/dt/@keys2design/carto-react-api.svg?style=flat-square" alt="downloads" />
   </a>
 </p>
 

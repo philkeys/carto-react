@@ -220,7 +220,7 @@ const DocTemplate = () => {
       <Typography mt={2}>
         For external use:
         <DocHighlight component='span'>
-          {'import { Button } from "@carto/react-ui";'}
+          {'import { Button } from "@keys2design/carto-react-ui";'}
         </DocHighlight>
         .
       </Typography>

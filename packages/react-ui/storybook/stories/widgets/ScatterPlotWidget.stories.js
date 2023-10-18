@@ -8,7 +8,7 @@ import {
   Stories,
   PRIMARY_STORY
 } from '@storybook/addon-docs';
-import * as cartoSlice from '@carto/react-redux/src/slices/cartoSlice';
+import * as cartoSlice from '@keys2design/carto-react-redux/src/slices/cartoSlice';
 import ScatterPlotWidget from '../../../../react-widgets/src/widgets/ScatterPlotWidget';
 import { mockAppStoreConfiguration } from './utils';
 import { buildReactPropsAsString } from '../../utils/utils';

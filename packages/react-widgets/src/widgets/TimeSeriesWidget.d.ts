@@ -1,10 +1,10 @@
-import { AggregationTypes, GroupDateTypes } from '@carto/react-core';
+import { AggregationTypes, GroupDateTypes } from '@keys2design/carto-react-core';
 import { CommonWidgetProps, MonoColumnWidgetProps } from '../types';
 
 export interface TimeseriesWidgetSerie {
   operation: AggregationTypes;
   operationColumn?: string;
-};
+}
 
 export type TimeSeriesWidgetProps = {
   operationColumn?: string;

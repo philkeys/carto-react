@@ -1,6 +1,6 @@
 import { checkCredentials, CLIENT_ID } from './common';
 import { MAP_TYPES, API_VERSIONS, fetchLayerData, FORMATS } from '@deck.gl/carto/typed';
-import { _assert as assert } from '@carto/react-core';
+import { _assert as assert } from '@keys2design/carto-react-core';
 
 /**
  * Get the TileJson for static tilesets

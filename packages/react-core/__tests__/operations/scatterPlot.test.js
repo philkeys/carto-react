@@ -1,4 +1,4 @@
-import { AggregationTypes } from '@carto/react-core/';
+import { AggregationTypes } from '@keys2design/carto-react-core/';
 import { scatterPlot } from '../../src/operations/scatterPlot';
 
 describe('scatterPlot', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import TimeSeriesWidgetUI from '../../../src/widgets/TimeSeriesWidgetUI/TimeSeriesWidgetUI';
-import { GroupDateTypes } from '@carto/react-core';
-import { TIME_SERIES_CHART_TYPES } from '@carto/react-ui';
+import { GroupDateTypes } from '@keys2design/carto-react-core';
+import { TIME_SERIES_CHART_TYPES } from '@keys2design/carto-react-ui';
 import LoadingTemplateWithSwitch from './LoadingTemplateWithSwitch';
 import { Box } from '@mui/material';
 

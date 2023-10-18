@@ -1,18 +1,18 @@
 import { getRange } from '../../src/models/RangeModel';
-import { Methods, executeTask } from '@carto/react-workers';
+import { Methods, executeTask } from '@keys2design/carto-react-workers';
 
 const RESULT = { min: 0, max: 100 };
 
 const mockedExecuteModel = jest.fn();
 
-jest.mock('@carto/react-api', () => ({
+jest.mock('@keys2design/carto-react-api', () => ({
   _executeModel: (props) => {
     mockedExecuteModel(props);
     return Promise.resolve({ rows: [RESULT] });
   }
 }));
 
-jest.mock('@carto/react-workers', () => ({
+jest.mock('@keys2design/carto-react-workers', () => ({
   executeTask: jest
     .fn()
     .mockImplementation(() => new Promise((resolve) => resolve(RESULT))),

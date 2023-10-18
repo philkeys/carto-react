@@ -1,4 +1,4 @@
-import { randomString } from '@carto/react-core';
+import { randomString } from '@keys2design/carto-react-core';
 
 /**
  * Get a new popup to start the OAuth flow with CARTO

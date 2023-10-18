@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { SolidPolygonLayer } from '@deck.gl/layers/typed';
-import { MASK_ID } from '@carto/react-core/';
-import { selectSpatialFilter } from '@carto/react-redux/';
+import { MASK_ID } from '@keys2design/carto-react-core/';
+import { selectSpatialFilter } from '@keys2design/carto-react-redux/';
 
 export default function MaskLayer() {
   const spatialFilterGeometry = useSelector((state) => selectSpatialFilter(state));

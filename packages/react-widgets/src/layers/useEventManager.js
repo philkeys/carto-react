@@ -1,8 +1,8 @@
 import { EventManager } from 'mjolnir.js';
 import { useEffect, useMemo } from 'react';
 import { useSelector } from 'react-redux';
-import { BASEMAPS } from '@carto/react-basemaps/';
-import { FEATURE_SELECTION_MODES } from '@carto/react-core/';
+import { BASEMAPS } from '@keys2design/carto-react-basemaps/';
+import { FEATURE_SELECTION_MODES } from '@keys2design/carto-react-core/';
 
 // When we're using Google as a base map, Nebula layer doesn't work becase Nebula uses the Deck Gl eventManager
 // so in this case we're defining a new EventManager with the Google maps div. On the other hand, in Builder

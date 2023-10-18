@@ -1,4 +1,4 @@
-import { GroupDateTypes } from '@carto/react-core';
+import { GroupDateTypes } from '@keys2design/carto-react-core';
 import { formatBucketRange } from '../../../src/widgets/TimeSeriesWidgetUI/utils/timeFormat';
 
 describe('timeFormat', () => {

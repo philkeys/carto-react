@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { setFeaturesReady } from '@carto/react-redux';
+import { setFeaturesReady } from '@keys2design/carto-react-redux';
 import { useState, useRef, useEffect, useCallback } from 'react';
 
 export default function useFeaturesCommons({ source }) {

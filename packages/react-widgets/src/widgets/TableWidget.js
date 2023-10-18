@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { WrapperWidgetUI, TableWidgetUI } from '@carto/react-ui';
+import { WrapperWidgetUI, TableWidgetUI } from '@keys2design/carto-react-ui';
 import { getTable, paginateTable, TABLE_HARD_LIMIT } from '../models';
 import useWidgetFetch from '../hooks/useWidgetFetch';
 import WidgetWithAlert from './utils/WidgetWithAlert';
-import { _FeatureFlags, _hasFeatureFlag } from '@carto/react-core';
+import { _FeatureFlags, _hasFeatureFlag } from '@keys2design/carto-react-core';
 
 /**
  * Renders a <TableWidget /> component

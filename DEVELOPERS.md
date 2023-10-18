@@ -64,7 +64,7 @@ You will need npm credentials under @carto organization.
 
 (Restricted to CARTO developers)
 
-@carto/react-ui package includes a storybook with UI components, which latest version is deployed at https://storybook-react.carto.com/
+@keys2design/carto-react-ui package includes a storybook with UI components, which latest version is deployed at https://storybook-react.carto.com/
 
 To deploy there a new update:
 

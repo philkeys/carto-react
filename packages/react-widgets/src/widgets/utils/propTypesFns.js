@@ -1,4 +1,4 @@
-import { AggregationTypes } from '@carto/react-core';
+import { AggregationTypes } from '@keys2design/carto-react-core';
 
 export const columnAggregationOn = (columnPropName) => (props, propName) => {
   if (Array.isArray(props[columnPropName]) && props[columnPropName].length >= 2) {

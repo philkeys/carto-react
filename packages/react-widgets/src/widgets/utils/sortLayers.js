@@ -1,4 +1,4 @@
-import { _assert as assert } from '@carto/react-core';
+import { _assert as assert } from '@keys2design/carto-react-core';
 
 /**
  * Sorts a list of layers based on a list of id property values

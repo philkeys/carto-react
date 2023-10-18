@@ -1,19 +1,19 @@
 import { getFormula } from '../../src/models/FormulaModel';
-import { AggregationTypes } from '@carto/react-core';
-import { Methods, executeTask } from '@carto/react-workers';
+import { AggregationTypes } from '@keys2design/carto-react-core';
+import { Methods, executeTask } from '@keys2design/carto-react-workers';
 
 const RESULT = 3.14;
 
 const mockedExecuteModel = jest.fn();
 
-jest.mock('@carto/react-api', () => ({
+jest.mock('@keys2design/carto-react-api', () => ({
   _executeModel: (props) => {
     mockedExecuteModel(props);
     return Promise.resolve({ rows: [{ VALUE: RESULT }] });
   }
 }));
 
-jest.mock('@carto/react-workers', () => ({
+jest.mock('@keys2design/carto-react-workers', () => ({
   executeTask: jest
     .fn()
     .mockImplementation(() => new Promise((resolve) => resolve({ value: RESULT }))),

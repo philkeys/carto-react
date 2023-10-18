@@ -1,4 +1,4 @@
-import { InvalidColumnError } from '@carto/react-core/';
+import { InvalidColumnError } from '@keys2design/carto-react-core/';
 import { DEFAULT_INVALID_COLUMN_ERR } from '../../src/widgets/utils/constants';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
@@ -6,7 +6,7 @@ import useWidgetFetch, {
   selectGeometryToIntersect
 } from '../../src/hooks/useWidgetFetch';
 import { mockClear, mockSetup } from '../mockReduxHooks';
-import { selectViewport } from '@carto/react-redux';
+import { selectViewport } from '@keys2design/carto-react-redux';
 import bboxPolygon from '@turf/bbox-polygon';
 
 const PARAMS_MOCK = {

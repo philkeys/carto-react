@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { checkIfSourceIsDroppingFeature } from '@carto/react-redux';
-import { NoDataAlert } from '@carto/react-ui';
+import { checkIfSourceIsDroppingFeature } from '@keys2design/carto-react-redux';
+import { NoDataAlert } from '@keys2design/carto-react-ui';
 import { useSelector } from 'react-redux';
 import { defaultDroppingFeaturesAlertProps } from './defaultDroppingFeaturesAlertProps';
 

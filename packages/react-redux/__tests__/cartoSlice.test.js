@@ -1,8 +1,8 @@
 import * as cartoSlice from '../src/slices/cartoSlice';
 import { setDefaultCredentials } from '@deck.gl/carto';
 import { mockAppStoreConfiguration } from './mockReducerManager';
-import { VOYAGER } from '@carto/react-basemaps';
-import { _FilterTypes } from '@carto/react-core';
+import { VOYAGER } from '@keys2design/carto-react-basemaps';
+import { _FilterTypes } from '@keys2design/carto-react-core';
 
 const INITIAL_STATE = {
   viewState: {

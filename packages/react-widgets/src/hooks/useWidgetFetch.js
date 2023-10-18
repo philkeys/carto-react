@@ -3,12 +3,12 @@ import {
   getGeometryToIntersect,
   isGlobalViewport,
   normalizeGeometry
-} from '@carto/react-core';
+} from '@keys2design/carto-react-core';
 import {
   selectAreFeaturesReadyForSource,
   selectSpatialFilter,
   selectViewport
-} from '@carto/react-redux';
+} from '@keys2design/carto-react-redux';
 import { dequal } from 'dequal';
 import { useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -28,7 +28,7 @@ export const WidgetStateType = {
  *
  * @typedef { import('geojson').Polygon | import('geojson').MultiPolygon } Geometry
  * @typedef { import('geojson').Feature<Geometry> } Feature
- * @typedef { import('@carto/react-core').Viewport } Viewport
+ * @typedef { import('@keys2design/carto-react-core').Viewport } Viewport
  *
  * @param {boolean} global if the widget is in global mode
  * @param {Viewport?} viewport the current viewport

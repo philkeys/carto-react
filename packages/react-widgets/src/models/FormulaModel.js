@@ -1,7 +1,7 @@
-import { _executeModel } from '@carto/react-api';
-import { Methods, executeTask } from '@carto/react-workers';
+import { _executeModel } from '@keys2design/carto-react-api';
+import { Methods, executeTask } from '@keys2design/carto-react-workers';
 import { normalizeObjectKeys, wrapModelCall } from './utils';
-import { AggregationTypes } from '@carto/react-core';
+import { AggregationTypes } from '@keys2design/carto-react-core';
 
 export function getFormula(props) {
   return wrapModelCall(props, fromLocal, fromRemote);

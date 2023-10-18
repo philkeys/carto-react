@@ -193,7 +193,7 @@ This way we can be more flexible regarding text styles without adding too many v
 In short, instead of Mui Typography, the component you should use to add text is this one:
 `react-ui/src/components/atoms/Typography`
 
-For external use: `import { Typography } from '@carto/react-ui';`.
+For external use: `import { Typography } from '@keys2design/carto-react-ui';`.
 
 ### Button
 
@@ -202,7 +202,7 @@ We have a `Button` component that uses `Mui Button` and wraps its children in `T
 So, instead of Mui Button, the component you should use to create buttons is this one:
 `react-ui/src/components/atoms/Button`
 
-For external use: `import { Button } from '@carto/react-ui';`.
+For external use: `import { Button } from '@keys2design/carto-react-ui';`.
 
 ### AppBar
 
@@ -217,7 +217,7 @@ This component normalize size and position of common elements like:
 
 Use `<AppBar /> ` from: `react-ui/src/components/organisms/AppBar`
 
-For external use: `import { AppBar } from '@carto/react-ui';`.
+For external use: `import { AppBar } from '@keys2design/carto-react-ui';`.
 
 ### Avatar
 
@@ -234,7 +234,7 @@ This component normalize `size` and allow us to use only the 4 sizes defined by 
 
 Use `<Avatar /> ` from: `react-ui/src/components/molecules/Avatar`
 
-For external use: `import { Avatar } from '@carto/react-ui';`.
+For external use: `import { Avatar } from '@keys2design/carto-react-ui';`.
 
 ## New components
 
@@ -247,7 +247,7 @@ This component build the show / hide content logic on top of TextField Mui compo
 Instead of `<TextField type='password' /> ` you should use:
 `react-ui/src/components/atoms/PasswordField`
 
-For external use: `import { PasswordField } from '@carto/react-ui';`.
+For external use: `import { PasswordField } from '@keys2design/carto-react-ui';`.
 
 ### SelectField
 
@@ -256,7 +256,7 @@ This component adds the `placeholder` logic on top of TextField Mui component.
 Instead of `<TextField select /> ` or `<Select />` you should use:
 `react-ui/src/components/atoms/SelectField`
 
-For external use: `import { SelectField } from '@carto/react-ui';`.
+For external use: `import { SelectField } from '@keys2design/carto-react-ui';`.
 
 ### MultipleSelectField
 
@@ -265,7 +265,7 @@ This component adds the `multiple selection` logic on top of SelectField compone
 Instead of `<Select multiple /> ` you should use:
 `react-ui/src/components/atoms/MultipleSelectField`
 
-For external use: `import { MultipleSelectField } from '@carto/react-ui';`.
+For external use: `import { MultipleSelectField } from '@keys2design/carto-react-ui';`.
 
 ### UploadField
 
@@ -276,7 +276,7 @@ We are replacing our old `InputFile` component by this new `UploadField`.
 Instead of `<Inputfile /> ` you should use:
 `react-ui/src/components/molecules/UploadField`
 
-For external use: `import { UploadField } from '@carto/react-ui';`.
+For external use: `import { UploadField } from '@keys2design/carto-react-ui';`.
 
 ### LabelWithIndicator
 
@@ -306,7 +306,7 @@ Optional
 
 Use `<LabelWithIndicator /> ` from: `react-ui/src/components/atoms/Avatar`
 
-For external use: `import { LabelWithIndicator } from '@carto/react-ui';`.
+For external use: `import { LabelWithIndicator } from '@keys2design/carto-react-ui';`.
 
 ### AccordionGroup
 
@@ -319,7 +319,7 @@ Available variants:
 
 Use `<AccordionGroup /> ` from: `react-ui/src/components/molecules/AccordionGroup`
 
-For external use: `import { AccordionGroup } from '@carto/react-ui';`.
+For external use: `import { AccordionGroup } from '@keys2design/carto-react-ui';`.
 
 # Testing
 

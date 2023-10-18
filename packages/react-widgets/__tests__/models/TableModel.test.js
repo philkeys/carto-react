@@ -1,5 +1,5 @@
 import { getTable, paginateTable } from '../../src/models/TableModel';
-import { Methods, executeTask } from '@carto/react-workers';
+import { Methods, executeTask } from '@keys2design/carto-react-workers';
 
 const RESULT = {
   rows: [
@@ -16,14 +16,14 @@ const RESULT = {
 
 const mockedExecuteModel = jest.fn();
 
-jest.mock('@carto/react-api', () => ({
+jest.mock('@keys2design/carto-react-api', () => ({
   _executeModel: (props) => {
     mockedExecuteModel(props);
     return Promise.resolve(RESULT);
   }
 }));
 
-jest.mock('@carto/react-workers', () => ({
+jest.mock('@keys2design/carto-react-workers', () => ({
   executeTask: jest.fn(),
   Methods: {
     FEATURES_RAW: 'featuresRawFeatures'

@@ -3,7 +3,7 @@ import {
   AggregationTypes,
   getSpatialIndexFromGeoColumn,
   _filtersToSQL
-} from '@carto/react-core';
+} from '@keys2design/carto-react-core';
 
 export function isRemoteCalculationSupported(props) {
   const { source } = props;

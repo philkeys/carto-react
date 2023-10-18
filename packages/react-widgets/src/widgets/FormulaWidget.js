@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { WrapperWidgetUI, FormulaWidgetUI } from '@carto/react-ui';
+import { WrapperWidgetUI, FormulaWidgetUI } from '@keys2design/carto-react-ui';
 import { getFormula } from '../models';
-import { AggregationTypes, _FeatureFlags, _hasFeatureFlag } from '@carto/react-core';
+import {
+  AggregationTypes,
+  _FeatureFlags,
+  _hasFeatureFlag
+} from '@keys2design/carto-react-core';
 import { checkFormulaColumn, columnAggregationOn } from './utils/propTypesFns';
 import useWidgetFetch from '../hooks/useWidgetFetch';
 import WidgetWithAlert from './utils/WidgetWithAlert';

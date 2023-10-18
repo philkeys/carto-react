@@ -1,14 +1,14 @@
 import React, { useCallback, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addFilter, removeFilter } from '@carto/react-redux';
-import { BarWidgetUI, WrapperWidgetUI } from '@carto/react-ui';
+import { addFilter, removeFilter } from '@keys2design/carto-react-redux';
+import { BarWidgetUI, WrapperWidgetUI } from '@keys2design/carto-react-ui';
 import {
   _FilterTypes as FilterTypes,
   AggregationTypes,
   _hasFeatureFlag,
   _FeatureFlags
-} from '@carto/react-core';
+} from '@keys2design/carto-react-core';
 import { getCategories } from '../models';
 import { useWidgetFilterValues } from '../hooks/useWidgetFilterValues';
 import { columnAggregationOn } from './utils/propTypesFns';

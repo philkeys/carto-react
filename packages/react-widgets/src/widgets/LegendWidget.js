@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { updateLayer } from '@carto/react-redux/';
-import { LegendWidgetUI } from '@carto/react-ui';
+import { updateLayer } from '@keys2design/carto-react-redux/';
+import { LegendWidgetUI } from '@keys2design/carto-react-ui';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import sortLayers from './utils/sortLayers';

@@ -1,6 +1,6 @@
 import { getHistogram } from '../../src/models/HistogramModel';
-import { AggregationTypes, _FilterTypes } from '@carto/react-core';
-import { Methods, executeTask } from '@carto/react-workers';
+import { AggregationTypes, _FilterTypes } from '@keys2design/carto-react-core';
+import { Methods, executeTask } from '@keys2design/carto-react-workers';
 
 const TICKS = [1, 2, 3];
 const RESULT = [3, 1, 2, 0];
@@ -13,14 +13,14 @@ const MOCK_SQL_RESPONSE = Array(TICKS.length)
 
 const mockedExecuteModel = jest.fn();
 
-jest.mock('@carto/react-api', () => ({
+jest.mock('@keys2design/carto-react-api', () => ({
   _executeModel: (props) => {
     mockedExecuteModel(props);
     return Promise.resolve({ rows: MOCK_SQL_RESPONSE });
   }
 }));
 
-jest.mock('@carto/react-workers', () => ({
+jest.mock('@keys2design/carto-react-workers', () => ({
   executeTask: jest
     .fn()
     .mockImplementation(() => new Promise((resolve) => resolve(RESULT))),

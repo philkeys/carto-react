@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { _getStats } from '@carto/react-api/';
-import { InvalidColumnError } from '@carto/react-core/';
+import { _getStats } from '@keys2design/carto-react-api/';
+import { InvalidColumnError } from '@keys2design/carto-react-core/';
 import useWidgetSource from './useWidgetSource';
 import { DEFAULT_INVALID_COLUMN_ERR } from '../widgets/utils/constants';
 

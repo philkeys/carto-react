@@ -1,6 +1,6 @@
 import { getTimeSeries } from '../../src/models/TimeSeriesModel';
-import { AggregationTypes, GroupDateTypes } from '@carto/react-core';
-import { Methods, executeTask } from '@carto/react-workers';
+import { AggregationTypes, GroupDateTypes } from '@keys2design/carto-react-core';
+import { Methods, executeTask } from '@keys2design/carto-react-workers';
 
 const MOCK_API_RESULT = {
   rows: [
@@ -12,7 +12,7 @@ const MOCK_API_RESULT = {
 
 const mockedExecuteModel = jest.fn();
 
-jest.mock('@carto/react-api', () => ({
+jest.mock('@keys2design/carto-react-api', () => ({
   _executeModel: (props) => {
     mockedExecuteModel(props);
     return Promise.resolve(MOCK_API_RESULT);
@@ -30,7 +30,7 @@ const MOCK_WORKER_RESULT = {
   categories: undefined
 };
 
-jest.mock('@carto/react-workers', () => ({
+jest.mock('@keys2design/carto-react-workers', () => ({
   executeTask: jest
     .fn()
     .mockImplementation(() => new Promise((resolve) => resolve(MOCK_WORKER_RESULT))),
