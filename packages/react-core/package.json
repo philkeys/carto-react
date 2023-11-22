@@ -77,7 +77,7 @@
     "@turf/intersect": "^6.3.0",
     "@turf/invariant": "^6.3.0",
     "@turf/union": "^6.3.0",
-    "h3-js": "^3.7.2",
+    "h3-js": "^4.1.0",
     "quadbin": "^0.1.9"
   }
 }
