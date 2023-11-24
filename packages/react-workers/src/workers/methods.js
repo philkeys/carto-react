@@ -9,7 +9,7 @@ import {
   groupValuesByDateColumn,
   AggregationTypes
 } from '@keys2design/carto-react-core';
-import { InvalidColumnError } from '@keys2design/carto-react-core/';
+import { InvalidColumnError } from '@keys2design/carto-react-core';
 import { applySorting } from '../utils/sorting';
 
 let currentFeatures;
@@ -67,7 +67,9 @@ export function getFormula({
   currentFeatures: cf
 }) {
   let result = null;
-  currentFeatures = cf;
+  if (cf) {
+    currentFeatures = cf;
+  }
   if (currentFeatures) {
     const targetOperation = aggregationFunctions[operation];
 
@@ -101,7 +103,9 @@ export function getHistogram({
   currentFeatures: cf
 }) {
   let result = null;
-  currentFeatures = cf;
+  if (cf) {
+    currentFeatures = cf;
+  }
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
 
@@ -129,7 +133,9 @@ export function getCategories({
   currentFeatures: cf
 }) {
   let result = null;
-  currentFeatures = cf;
+  if (cf) {
+    currentFeatures = cf;
+  }
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
 
@@ -159,9 +165,12 @@ export function getScatterPlot({
   currentFeatures: cf
 }) {
   let result = [];
+  if (cf) {
+    currentFeatures = cf;
+  }
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
-    currentFeatures = cf;
+
     assertColumn(xAxisColumn, yAxisColumn);
 
     result = scatterPlot({
@@ -187,7 +196,9 @@ export function getTimeSeries({
   currentFeatures: cf
 }) {
   let result = [];
-  currentFeatures = cf;
+  if (cf) {
+    currentFeatures = cf;
+  }
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
 
@@ -215,7 +226,9 @@ export function getRange({
   currentFeatures: cf
 }) {
   let result = null;
-  currentFeatures = cf;
+  if (cf) {
+    currentFeatures = cf;
+  }
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
 
@@ -242,7 +255,9 @@ export function getRawFeatures({
   let rows = [];
   let totalCount = 0;
   let hasData = false;
-  currentFeatures = cf;
+  if (cf) {
+    currentFeatures = cf;
+  }
   if (currentFeatures) {
     rows = applySorting(getFilteredFeatures(filters, filtersLogicalOperator), {
       sortBy,
