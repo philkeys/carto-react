@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2020",
+    "module": "es2020",
     "jsx": "react",
     "strict": true,
     "noImplicitAny": false,
@@ -11,7 +12,6 @@
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
     "baseUrl": ".",
-    "compileOnSave": true,
     "paths": {
       "@keys2design/carto-react-api/*": ["packages/react-api/src/*"],
       "@keys2design/carto-react-auth/*": ["packages/react-auth/src/*"],

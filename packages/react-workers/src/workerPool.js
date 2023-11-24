@@ -1,5 +1,3 @@
-import featuresWorker from './workers/features.worker';
-
 const pool = {};
 
 export function executeTask(source, method, params) {
@@ -30,7 +28,7 @@ export function removeWorker(source) {
 function getWorker(source) {
   if (!pool[source]) {
     pool[source] = {
-      worker: new featuresWorker(),
+      worker: new Worker(new URL('./workers/features.worker', import.meta.url)),
       tasks: []
     };
     onmessage(pool[source]);

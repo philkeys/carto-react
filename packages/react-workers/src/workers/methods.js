@@ -63,10 +63,11 @@ export function getFormula({
   filtersLogicalOperator,
   operation,
   column,
-  joinOperation
+  joinOperation,
+  currentFeatures: cf
 }) {
   let result = null;
-
+  currentFeatures = cf;
   if (currentFeatures) {
     const targetOperation = aggregationFunctions[operation];
 
@@ -96,10 +97,11 @@ export function getHistogram({
   operation,
   column,
   ticks,
-  joinOperation
+  joinOperation,
+  currentFeatures: cf
 }) {
   let result = null;
-
+  currentFeatures = cf;
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
 
@@ -123,10 +125,11 @@ export function getCategories({
   operation,
   column,
   operationColumn,
-  joinOperation
+  joinOperation,
+  currentFeatures: cf
 }) {
   let result = null;
-
+  currentFeatures = cf;
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
 
@@ -152,12 +155,13 @@ export function getScatterPlot({
   xAxisColumn,
   yAxisColumn,
   xAxisJoinOperation,
-  yAxisJoinOperation
+  yAxisJoinOperation,
+  currentFeatures: cf
 }) {
   let result = [];
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
-
+    currentFeatures = cf;
     assertColumn(xAxisColumn, yAxisColumn);
 
     result = scatterPlot({
@@ -179,10 +183,11 @@ export function getTimeSeries({
   stepSize,
   operation,
   operationColumn,
-  joinOperation
+  joinOperation,
+  currentFeatures: cf
 }) {
   let result = [];
-
+  currentFeatures = cf;
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
 
@@ -203,9 +208,14 @@ export function getTimeSeries({
   return result;
 }
 
-export function getRange({ filters, filtersLogicalOperator, column }) {
+export function getRange({
+  filters,
+  filtersLogicalOperator,
+  column,
+  currentFeatures: cf
+}) {
   let result = null;
-
+  currentFeatures = cf;
   if (currentFeatures) {
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
 
@@ -226,12 +236,13 @@ export function getRawFeatures({
   filtersLogicalOperator,
   sortBy,
   sortByDirection = 'asc',
-  sortByColumnType
+  sortByColumnType,
+  currentFeatures: cf
 }) {
   let rows = [];
   let totalCount = 0;
   let hasData = false;
-
+  currentFeatures = cf;
   if (currentFeatures) {
     rows = applySorting(getFilteredFeatures(filters, filtersLogicalOperator), {
       sortBy,
