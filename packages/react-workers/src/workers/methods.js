@@ -133,10 +133,22 @@ export function getCategories({
   currentFeatures: cf
 }) {
   let result = null;
+  console.log('cf out of the gates: ', cf, currentFeatures);
   if (cf) {
+    console.log('cf inside the conditional: ', cf);
     currentFeatures = cf;
   }
   if (currentFeatures) {
+    console.log(
+      'this should be fired: ',
+      currentFeatures,
+      filters,
+      filtersLogicalOperator,
+      operation,
+      column,
+      operationColumn,
+      joinOperation
+    );
     const filteredFeatures = getFilteredFeatures(filters, filtersLogicalOperator);
 
     assertColumn(column, operationColumn);
