@@ -5,7 +5,8 @@ export const FilterTypes = Object.freeze({
   BETWEEN: 'between', // [a, b] both are included
   CLOSED_OPEN: 'closed_open', // [a, b) a is included, b is not
   TIME: 'time',
-  STRING_SEARCH: 'stringSearch'
+  STRING_SEARCH: 'stringSearch',
+  ARRAY_SEARCH: 'arraySearch'
 });
 
 export const filterFunctions = {
@@ -22,7 +23,18 @@ export const filterFunctions = {
     }
   },
   [FilterTypes.CLOSED_OPEN]: closedOpen,
-  [FilterTypes.STRING_SEARCH]: stringSearch
+  [FilterTypes.STRING_SEARCH]: stringSearch,
+  [FilterTypes.ARRAY_SEARCH](filterValues, featureValue, params = {}) {
+    function checkSubstrings(string, substrings) {
+      if (params.method === 'any') {
+        return substrings.some((substring) => string.includes(substring));
+      } else {
+        return substrings.every((substring) => string.includes(substring));
+      }
+    }
+
+    return checkSubstrings(featureValue, filterValues);
+  }
 };
 
 // FilterTypes.BETWEEN

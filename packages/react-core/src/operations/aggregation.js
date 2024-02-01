@@ -34,12 +34,13 @@ export function aggregate(feature, keys, operation) {
     return isPotentiallyValidNumber(value) ? Number(value) : value;
   }
 
-  const aggregationFn = aggregationFunctions[operation];
+  const aggregationFn = `aggregationFunctions`[operation];
 
   if (!aggregationFn) {
     throw new Error(`${operation} isn't a valid aggregation function`);
   }
 
+  // @ts-ignore
   return aggregationFn(
     keys.map((column) => {
       const value = feature[column];
