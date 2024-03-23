@@ -11,18 +11,16 @@ export function histogram({
   if (Array.isArray(data) && data.length === 0) {
     return [];
   }
-
-  const binsContainer = [!isPreciseRange && Number.MIN_SAFE_INTEGER, ...ticks].map(
-    (tick, index, arr) => ({
-      bin: index,
-      start: tick,
-      end:
-        index === arr.length - 1 && !isPreciseRange
-          ? Number.MAX_SAFE_INTEGER
-          : arr[index + 1],
-      values: []
-    })
-  );
+  const adjustedArray = isPreciseRange ? [...ticks] : [Number.MIN_SAFE_INTEGER, ...ticks];
+  const binsContainer = adjustedArray.map((tick, index, arr) => ({
+    bin: index,
+    start: tick,
+    end:
+      index === arr.length - 1 && !isPreciseRange
+        ? Number.MAX_SAFE_INTEGER
+        : arr[index + 1],
+    values: []
+  }));
 
   data.forEach((feature) => {
     const featureValue = aggregate(feature, valuesColumns, joinOperation);

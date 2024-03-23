@@ -7,4 +7,5 @@ export function histogram(args: {
   joinOperation?: AggregationTypes;
   ticks: number[];
   operation?: AggregationTypes;
+  isPreciseRange?: boolean;
 }): HistogramFeature;
