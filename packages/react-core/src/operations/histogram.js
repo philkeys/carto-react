@@ -1,16 +1,28 @@
 import { aggregate, aggregationFunctions } from './aggregation';
 
-export function histogram({ data, valuesColumns, joinOperation, ticks, operation }) {
+export function histogram({
+  data,
+  valuesColumns,
+  joinOperation,
+  ticks,
+  operation,
+  isPreciseRange
+}) {
   if (Array.isArray(data) && data.length === 0) {
     return [];
   }
 
-  const binsContainer = [Number.MIN_SAFE_INTEGER, ...ticks].map((tick, index, arr) => ({
-    bin: index,
-    start: tick,
-    end: index === arr.length - 1 ? Number.MAX_SAFE_INTEGER : arr[index + 1],
-    values: []
-  }));
+  const binsContainer = [!isPreciseRange && Number.MIN_SAFE_INTEGER, ...ticks].map(
+    (tick, index, arr) => ({
+      bin: index,
+      start: tick,
+      end:
+        index === arr.length - 1 && !isPreciseRange
+          ? Number.MAX_SAFE_INTEGER
+          : arr[index + 1],
+      values: []
+    })
+  );
 
   data.forEach((feature) => {
     const featureValue = aggregate(feature, valuesColumns, joinOperation);
