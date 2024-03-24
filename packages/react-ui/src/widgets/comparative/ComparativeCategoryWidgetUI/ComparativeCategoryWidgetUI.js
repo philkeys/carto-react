@@ -239,7 +239,7 @@ function ComparativeCategoryWidgetUI({
   return (
     <Wrapper>
       {filterable ? (
-        <Toolbar center={true}>
+        <Toolbar>
           <Typography variant='caption'>
             {selectedCategories.length ? selectedCategories.length : 'All'}
             {' selected'}
@@ -292,9 +292,8 @@ function ComparativeCategoryWidgetUI({
           </>
         ) : null}
         {list.map((d) => (
-          <CategoryItemWrapper>
+          <CategoryItemWrapper key={d.key}>
             <CategoryItem
-              key={d.key}
               item={d}
               animation={animation}
               animationOptions={animationOptions}
