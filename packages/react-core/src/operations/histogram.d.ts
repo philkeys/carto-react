@@ -8,4 +8,6 @@ export function histogram(args: {
   ticks: number[];
   operation?: AggregationTypes;
   isPreciseRange?: boolean;
+  min?: number;
+  max?: number;
 }): HistogramFeature;
