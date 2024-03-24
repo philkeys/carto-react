@@ -6,18 +6,24 @@ export function histogram({
   joinOperation,
   ticks,
   operation,
-  isPreciseRange
+  isPreciseRange,
+  min,
+  max
 }) {
   if (Array.isArray(data) && data.length === 0) {
     return [];
   }
-  const adjustedArray = isPreciseRange ? [...ticks] : [Number.MIN_SAFE_INTEGER, ...ticks];
+  const adjustedArray = isPreciseRange
+    ? [min, ...ticks]
+    : [Number.MIN_SAFE_INTEGER, ...ticks];
   const binsContainer = adjustedArray.map((tick, index, arr) => ({
     bin: index,
     start: tick,
     end:
-      index === arr.length - 1 && !isPreciseRange
-        ? Number.MAX_SAFE_INTEGER
+      index === arr.length - 1
+        ? isPreciseRange
+          ? max
+          : Number.MAX_SAFE_INTEGER
         : arr[index + 1],
     values: []
   }));
